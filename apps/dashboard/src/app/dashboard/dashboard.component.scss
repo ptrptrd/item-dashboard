@@ -1,0 +1,59 @@
+.component-title-div {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+}
+
+.component-title {
+    margin: 0;
+}
+
+.item-card {
+    border: 2px solid rgba($color: #000000, $alpha: 0.0); 
+    max-width: 400px;
+    min-height: 100px;
+    cursor: pointer;
+}
+
+.mat-card-content-background {
+    padding: 16px 0px 16px 0px;
+    height: 75%;
+}
+
+.mat-card-content-header {
+    display: flex;
+    padding: 20px;
+}
+
+.search-filter {
+    padding: 20px 20px 0px 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    padding: 0px 20px 20px 20px;
+    align-items: stretch;
+}
+
+.item-menu-icon {
+    font-size: large;
+}
+
+.options {
+    align-self: flex-end;
+    padding: 10px;
+    margin: 5px;
+}
+
+.card-selected {
+    border: 2px solid #215a3b;
+}
+
+mat-card-header {
+    padding: 16px 8px 0px 16px;
+}

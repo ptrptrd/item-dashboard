@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Delete Item?</h1>
+<div mat-dialog-content>
+    <p>The following item will be permanently deleted:</p>
+    <ul>
+        <li>{{data.name}}</li>
+    </ul>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close (click)="itemDeleteCancel()">Cancel</button>
+  <button mat-button mat-dialog-close (click)="itemDeleteConfirm()">Confirm</button>
+</div>

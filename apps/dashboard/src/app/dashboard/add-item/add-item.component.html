@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Add Item</h1>
+<mat-dialog-content>
+  <p>Information of the new item</p>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput type=text [(ngModel)]="data.name" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Location</mat-label>
+    <input matInput type=text [(ngModel)]="data.location"/>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Type</mat-label>
+    <input matInput type=text [(ngModel)]="data.type"/>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onAddClick()">Add</button>
+</mat-dialog-actions>

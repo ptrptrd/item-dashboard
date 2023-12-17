@@ -1,0 +1,45 @@
+<div class="component-title-div">
+    <h2 class="component-title">Items</h2>
+</div>
+<div class="search-filter">
+    <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput #searchBox placeholder="Search item" (input)="searchTextChanged(searchBox.value)">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div>
+<div class="mat-card-content-background">
+    <div class="mat-card-content-header">
+        <h3>{{shownItems?.length}} items</h3>
+        <span class="spacer"></span>
+        <button mat-raised-button class="options" color="primary" (click)="addItemDialogOpen()">Add Item</button>
+    </div>
+    <mat-card-content class="grid">
+        <div *ngFor="let item of shownItems">
+            <mat-card class="item-card" (click)="itemSelect(item)" [ngClass]="{'card-selected': item.isSelected} ">
+                <mat-card-header>
+                    <div class="card-title">
+                        <mat-card-title>{{item.name}}</mat-card-title>
+                        <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
+                    </div>
+                    <span class="spacer"></span>
+                    <div class="class-action" align="end">
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="item-menu">
+                        <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon class="item-menu-icon">edit</mat-icon>
+                            <span>Edit</span>
+                        </button>
+                        <button mat-menu-item (click)="itemDelete(item)">
+                            <mat-icon class="item-menu-icon">delete</mat-icon>
+                            <span>Delete</span>
+                        </button>
+                        </mat-menu>
+                    </div>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </mat-card-content>
+</div>
